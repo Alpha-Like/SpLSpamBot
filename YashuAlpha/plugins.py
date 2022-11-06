@@ -37,4 +37,4 @@ async def start(_, m):
     await m.reply_photo(STUFF.START_PIC, txt, reply_markup=START_MARKUP_STR)
     return
 
-HELP_TEXT = 
+HELP_TEXT = "★ 𝙆𝙀𝙎𝙃𝘼𝙑𝙓𝙎𝙥𝙖𝙢 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
