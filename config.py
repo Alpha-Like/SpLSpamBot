@@ -16,5 +16,14 @@ class TOKENS:
     BOT_TOKEN_9 = os.environ["BOT_TOKEN_9"]
     BOT_TOKEN_10 = os.environ["BOT_TOKEN_10"]
 
-class OWNER:
-    OWNER_ID = os.environ["OWNER_ID"]
+class DEV:
+    OWNER_ID = int(os.environ["OWNER_ID"])
+    SUDO_USERS_STR = os.environ["SUDO_USERS"].split()
+    SUDO_USERS = []
+    for x in SUDO_USERS_STR:
+        SUDO_USERS.remove(x)
+        SUDO_USERS.append(int(x))
+
+class STUFF:
+    ALIVE_PIC = os.environ["ALIVE_PIC"]
+    PING_PIC = os.environ["PING_PIC"]
