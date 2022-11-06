@@ -5,6 +5,7 @@ from YashuAlpha.raid import raid, replyraid, dreplyraid, raid_cwf
 from YashuAlpha.data import KeshavX
 from YashuAlpha.spam import spam, dspam
 from YashuAlpha.echo import addecho, rmecho, echo_cwf
+from YashuAlpha.leave import leave
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
@@ -122,3 +123,29 @@ async def replyraid_plug(_, m):
 @END10.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
 async def dreplyraid_plug(_, m):
     await dreplyraid(_, m)
+
+@END.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
+@END2.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
+@END3.on_message(filters.command("leave", hl)& filters.user(LEGENDS))
+@END4.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
+@END5.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
+@END6.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
+@END7.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
+@END8.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
+@END9.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
+@END10.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
+async def leave_plug(_, m):
+    await leave(_, m)
+
+@END.on_message(filters.command("start", hl))
+@END2.on_message(filters.command("start", hl))
+@END3.on_message(filters.command("start", hl))
+@END4.on_message(filters.command("start", hl))
+@END5.on_message(filters.command("start", hl))
+@END6.on_message(filters.command("start", hl))
+@END7.on_message(filters.command("start", hl))
+@END8.on_message(filters.command("start", hl))
+@END9.on_message(filters.command("start", hl))
+@END10.on_message(filters.command("start", hl))
+async def start_plug(_, m):
+    await start(_, m)
