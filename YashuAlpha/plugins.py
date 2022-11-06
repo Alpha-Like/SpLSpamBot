@@ -1,6 +1,8 @@
 from pyrogram import InlineKeyboardButton as IKB, InlineKeyboardMarkup as IKM
 from config import DEV, STUFF
 
+hl = STUFF.COMMAND_HANDLER
+
 START_MARKUP_STR = IKM(
                [
                [
@@ -37,4 +39,69 @@ async def start(_, m):
     await m.reply_photo(STUFF.START_PIC, txt, reply_markup=START_MARKUP_STR)
     return
 
-HELP_TEXT = "★ 𝙆𝙀𝙎𝙃𝘼𝙑𝙓𝙎𝙥𝙖𝙢 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
+HELP_TEXT = "★ 𝙀𝙣𝙙 𝙓 𝙎𝙥𝙖𝙢 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
+
+SPAM_HELP = spam_msg = f"""
+**Help Spam Cmds**
+
+**Spam :** Spams a Message For Given Counter(<= 100).
+Command :
+1) {hl}spam <count> <message to spam> (you can reply any message if you want bot to reply that message and do spamming)
+2) {hl}spam <count> <replying any message>
+
+**DelaySpam :** Delay Spam a Text For Given Counter After Given Time.
+Command :
+1) {hl}delayspam <delay> <count> <message to spam> (you can reply any message if you want bot to reply that message and do spamming)
+2) {hl}delayspam <delay> <count> <replying any message>
+
+** © @Asynchorous**
+"""
+
+RAID_HELP = f"""
+**Help Raid Cmds**
+
+
+**Raid :** Activates Raid on Any individual User For Given Range.
+Command :
+1) {hl}raid <count> <username
+2) {hl}raid <count> <reply to user>
+
+**DelayRaid :** Activates Raid on Any individual User For Given Range.
+Command :
+1) {hl}delayraid <delay> <count> <Username of User>
+2) {hl}delayraid <delay> <count> <reply to a User>
+
+**ReplyRaid :** Activates Reply Raid on The User!!
+Command :
+1) {hl}replyraid <replying to user>
+2) {hl}dreplyraid <username>
+
+**DReplyRaid :** Deactivates Reply Raid on The User!!
+Command :
+1) {hl}dreplyraid <replying to user>
+2) {hl}dreplyraid <username>
+
+
+**© @Asynchorous**
+"""
+
+EXTRA_HELP = f"""
+**Help Extra Cmds**
+
+**Alive and Ping :** Ping Cmds
+Command :
+1) {hl}ping 
+2) {hl}alive
+
+**Echo :** To Active Echo On Any User
+Command :
+1) {hl}addecho <reply to user>
+2) {hl}rmecho <reply to user>
+
+**Leave :** To Leave Group/Channel
+Command :
+1) {hl}leave <group/chat id>
+2) {hl}leave : Type in the Group bot will auto leave that group
+
+**© @Asynchorous**
+"""
