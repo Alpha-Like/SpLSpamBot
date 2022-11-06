@@ -6,6 +6,8 @@ from YashuAlpha.data import KeshavX
 from YashuAlpha.spam import spam, dspam
 from YashuAlpha.echo import addecho, rmecho, echo_cwf
 
+LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
+
 END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN)
 END2 = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_2)
 END3 = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_3)
@@ -81,3 +83,30 @@ async def addecho_plug(_, m):
 @END10.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
 async def rmecho_plug(_, m):
     await rmecho(_, m)
+
+@END.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+@END2.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+@END3.on_message(filters.command("raid", hl)& filters.user(LEGENDS))
+@END4.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+@END5.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+@END6.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+@END7.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+@END8.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+@END9.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+@END10.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+async def raid_plug(_, m):
+    await raid(_, m)
+
+@END.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
+@END2.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
+@END3.on_message(filters.command("replyraid", hl)& filters.user(LEGENDS))
+@END4.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
+@END5.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
+@END6.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
+@END7.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
+@END8.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
+@END9.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
+@END10.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
+async def replyraid_plug(_, m):
+    await replyraid(_, m)
+
