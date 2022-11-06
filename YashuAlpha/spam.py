@@ -110,48 +110,50 @@ async def dspam(_, m):
                 count = int(m.text.split()[1])
                 delay = int(m.text.split()[2])
             except:
-                return await m.reply(f"{hl}spam [count]")
+                return await m.reply(f"{hl}spam [count] [delay]")
         elif y.sticker:
             x = y.sticker.id
             try:
                 count = int(m.text.split()[1])
                 delay = int(m.text.split()[2])
             except:
-                return await m.reply(f"{hl}spam [count]")
+                return await m.reply(f"{hl}spam [count] [delay]")
         elif y.video:
             x = await _.download_media(y)
             try:
                 count = int(m.text.split()[1])
                 delay = int(m.text.split()[2])
             except:
-                txt = None  
+                return await m.reply(f"{hl}spam [count] [delay]")
         elif y.document:
             x = await _.download_media(y)
             try:
                 count = int(m.text.split()[1])
                 delay = int(m.text.split()[2])
             except:
-                return await m.reply(f"{hl}spam [count]")
+                return await m.reply(f"{hl}spam [count] [delay]")
         elif y.audio:
             x = await _.download_media(y)
             try:
                 count = int(m.text.split()[1])
                 delay = int(m.text.split()[2])
             except:
-                return await m.reply(f"{hl}spam [count]")
+                return await m.reply(f"{hl}spam [count] [delay]")
         else:
             x = None
             try:
                 count = int(m.text.split()[1])
-                txt = m.text.split(None, 1)[2]
+                txt = m.text.split(None, 1)[3]
+                delay = int(m.text.split()[2])
             except:
-                return await m.reply(f"{hl}spam [count] [text]")
+                return await m.reply(f"{hl}spam [count] [delay] [text]")
     else:
         try:
             count = int(m.text.split()[1])
-            txt = m.text.split(None, 1)[2]
+            txt = m.text.split(None, 1)[3]
+            delay = int(m.text.split()[2])
         except:
-            return await m.reply(f"{hl}spam [count] [text]")
+            return await m.reply(f"{hl}spam [count] [delay] [text]")
 
     for x in range(0, count):
         if y.photo:
@@ -169,6 +171,12 @@ async def dspam(_, m):
         elif y.audio:
             try:
                 await _.send_audio(m.chat.id, x)
+            except Exception as e:
+                print(e)
+                pass
+        elif y.sticker:
+            try:
+                await _.send_sticker(m.chat.id, x)
             except Exception as e:
                 print(e)
                 pass
