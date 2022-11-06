@@ -4,7 +4,7 @@ from YashuAlpha.plugins import start, help, cmds_cbq, close_cbq, raid_cbq, help_
 from YashuAlpha.raid import raid, replyraid, dreplyraid, raid_cwf
 from YashuAlpha.data import KeshavX
 from YashuAlpha.spam import spam, dspam
-from YashuAlpha.echo import addecho, rmecho
+from YashuAlpha.echo import addecho, rmecho, echo_cwf
 
 END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN)
 END2 = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_2)
