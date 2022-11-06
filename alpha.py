@@ -1,5 +1,10 @@
 from pyrogram import Client, filters, idle
 from config import *
+from YashuAlpha.plugins import start, help, cmds_cbq, close_cbq, raid_cbq, help_cbq, spam_cbq
+from YashuAlpha.raid import raid, replyraid, dreplyraid, raid_cwf
+from YashuAlpha.data import KeshavX
+from YashuAlpha.spam import spam, dspam
+from YashuAlpha.echo import addecho, rmecho
 
 END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN)
 END2 = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_2)
