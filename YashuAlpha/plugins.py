@@ -124,3 +124,27 @@ HELP_MARKUP = IKM(
 async def help(_, m):
     await m.reply_photo(STUFF.HELP_PIC, caption=HELP_TEXT, reply_markup=HELP_MARKUP)
     return
+
+CLOSE_MARKUP = IKM(
+               [
+               [
+               IKB("🗑️ Close", callback_data="close")
+               ]
+               ]
+               )
+
+async def cmds_cbq(_, q):
+    await q.edit_message_text(text=HELP_TEXT, reply_markup=HELP_MARKUP)
+
+async def spam_cbq(_, q):
+    await q.edit_message_text(text=SPAM_HELP, reply_markup=CLOSE_MARKUP)
+
+async def raid_cbq(_, q):
+    await q.edit_message_text(text=RAID_HELP, reply_markup=CLOSE_MARKUP)
+
+async def extra_cbq(_, q):
+    await q.edit_message_text(text=EXTRA_HELP, reply_markup=CLOSE_MARKUP)
+
+async def close_cbq(_, q):
+    await q.message.delete()
+
