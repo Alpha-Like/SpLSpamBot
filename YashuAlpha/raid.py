@@ -1,9 +1,12 @@
 from .data import RAID, REPLYRAID
 import random
-from config import STUFF
+from config import STUFF, DEV
 import asyncio
+from .data import KeshavX
 
 hl = STUFF.COMMAND_HANDLER
+
+LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 async def raid(_, m):
     try:
@@ -13,6 +16,8 @@ async def raid(_, m):
     for c in range(0, count):
         raid = random.choice(RAID)
         if m.reply_to_message:
+            if m.reply_to_message.from_user.id in LEGENDS:
+                return await m.reply("CAN'T RAID THEM !")
             await m.reply_to_message.reply(raid)
         else:
             await _.send_message(m.chat.id, raid)
@@ -32,7 +37,10 @@ async def replyraid(_, m):
                 id = int(x)
     except:
         return await m.reply(f"{hl}replyraid [id|username|reply]")
-    
+    if id in LEGENDS:
+        return await m.reply("CAN'T RAID THEM !")
+    if id in RAID_IDS:
+        return await m.reply("RAID IS ALREADY ACTIVATED TO THIS USER !")
     RAID_IDS.append(id)
     return await m.reply("RAID REPLY ACTIVATED TO USER" + str(id))
     
@@ -50,6 +58,8 @@ async def dreplyraid(_, m):
     except:
         return await m.reply(f"{hl}dreplyraid [id|username|reply]")
     
+    if id in RAID_IDS:
+        return await m.reply("RAID IS NOT ACTIVATED TO THIS USER !")
     RAID_IDS.remove(id)
     return await m.reply("RAID REPLY DEACTIVATED TO USER" + str(id))
 
