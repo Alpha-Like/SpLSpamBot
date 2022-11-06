@@ -21,7 +21,6 @@ class DEV:
     SUDO_USERS_STR = os.environ["SUDO_USERS"].split()
     SUDO_USERS = []
     for x in SUDO_USERS_STR:
-        SUDO_USERS.remove(x)
         SUDO_USERS.append(int(x))
 
 class STUFF:
