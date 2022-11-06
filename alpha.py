@@ -55,3 +55,29 @@ async def spam_plug(_, m):
 @END10.on_message(filters.command("dspam", hl) & filters.user(LEGENDS))
 async def dspam_plug(_, m):
     await dspam(_, m)
+
+@END.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
+@END2.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
+@END3.on_message(filters.command("addecho", hl)& filters.user(LEGENDS))
+@END4.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
+@END5.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
+@END6.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
+@END7.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
+@END8.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
+@END9.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
+@END10.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
+async def addecho_plug(_, m):
+    await addecho(_, m)
+
+@END.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+@END2.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+@END3.on_message(filters.command("rmecho", hl)& filters.user(LEGENDS))
+@END4.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+@END5.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+@END6.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+@END7.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+@END8.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+@END9.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+@END10.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+async def rmecho_plug(_, m):
+    await rmecho(_, m)
