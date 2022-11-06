@@ -30,13 +30,13 @@ async def start(_, m):
     bot_name = "𝙀𝙣𝙙 𝙓 𝙎𝙥𝙖𝙢"
     if m.from_user.id in x:
         txt = f"**Hello Boss !!, It's Me {bot_name}, Your Spam Bot !! \n\n Click Below Buttons For Help. 🌚**"
-        await m.reply_photo(STUFF.START_PIC, txt, START_MARKUP_DEV)
+        await m.reply_photo(STUFF.START_PIC, caption=txt, START_MARKUP_DEV)
         return
     if str(m.chat.id)[0] == "-":
         return
     men = m.from_user.mention
     txt = f"**Hello !! {men}\nNice To Meet You, Well I Am {bot_name}, A Powerfull Spam Bot.** \n\n**If You Want Your Own Spam Bots You Can Deploy From Button Given Below.** \n\n**Powered By : [𝙃𝙖𝙙𝙚𝙨](https://t.me/The_Hades_World)**"
-    await m.reply_photo(STUFF.START_PIC, txt, reply_markup=START_MARKUP_STR)
+    await m.reply_photo(STUFF.START_PIC, caption=txt, reply_markup=START_MARKUP_STR)
     return
 
 HELP_TEXT = "★ 𝙀𝙣𝙙 𝙓 𝙎𝙥𝙖𝙢 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
@@ -59,7 +59,6 @@ Command :
 
 RAID_HELP = f"""
 **Help Raid Cmds**
-
 
 **Raid :** Activates Raid on Any individual User For Given Range.
 Command :
@@ -105,3 +104,23 @@ Command :
 
 **© @Asynchorous**
 """
+
+HELP_MARKUP = IKM(
+              [
+              [
+              IKB("⚡️ Spam ⚡️", callback_data="spam_help"),
+              IKB("🔥 Raid 🔥", callback_data="raid_help")
+              ],
+              [
+              IKB("💭 Extras 💭", callback_data="extra_help")
+              ],
+              [
+              IKB("😶‍🌫️ Owner 😶‍🌫️", url="t.me/Asynchorous"),
+              IKB("✨ Support ✨", url="t.me/The_Hades_World")
+              ]
+              ]
+              )
+
+async def help(_, m):
+    await m.reply_photo(STUFF.HELP_PIC, caption=HELP_TEXT, reply_markup=HELP_MARKUP)
+    return
