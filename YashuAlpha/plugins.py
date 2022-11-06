@@ -11,7 +11,7 @@ START_MARKUP_STR = IKM(
                IKB("✨ Support ✨", url="t.me/The_Hades_World")
                ],
                [
-               IKB("🔥 Repo 🔥", url="https://github.com/Timeisnotwaiting/EndSpamBot)
+               IKB("🔥 Repo 🔥", url="https://github.com/Timeisnotwaiting/EndSpamBot")
                ]
                ]
                )
