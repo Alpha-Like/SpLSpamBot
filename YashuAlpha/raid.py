@@ -35,6 +35,20 @@ async def replyraid(_, m):
     
     RAID_IDS.append(id)
     return await m.reply("RAID REPLY ACTIVATED TO USER" + str(id))
-
     
+async def dreplyraid(_, m):
+    global RAID_IDS
+    try:
+        if m.reply_to_message:
+            id = m.reply_to_message.from_user.id
+        else:
+            x = m.text.split()[1]
+            if str(x)[0] == "@":
+                id = (await _.get_users(x)).id
+            else:
+                id = int(x)
+    except:
+        return await m.reply(f"{hl}dreplyraid [id|username|reply]")
     
+    RAID_IDS.remove(id)
+    return await m.reply("RAID REPLY DEACTIVATED TO USER" + str(id))
