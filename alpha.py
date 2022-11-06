@@ -110,3 +110,15 @@ async def raid_plug(_, m):
 async def replyraid_plug(_, m):
     await replyraid(_, m)
 
+@END.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
+@END2.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
+@END3.on_message(filters.command("dreplyraid", hl)& filters.user(LEGENDS))
+@END4.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
+@END5.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
+@END6.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
+@END7.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
+@END8.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
+@END9.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
+@END10.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
+async def dreplyraid_plug(_, m):
+    await dreplyraid(_, m)
