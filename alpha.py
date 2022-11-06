@@ -9,6 +9,8 @@ from YashuAlpha.leave import leave
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
+txt = ""
+
 END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN)
 END2 = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_2)
 END3 = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_3)
@@ -33,6 +35,8 @@ END10 = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKE
 async def help_plug(_, m):
     await help(_, m)
 
+txt += "[module] loaded :- help"
+
 @END.on_message(filters.command("spam", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("spam", hl) & filters.user(LEGENDS))
 @END3.on_message(filters.command("spam", hl)& filters.user(LEGENDS))
@@ -45,6 +49,8 @@ async def help_plug(_, m):
 @END10.on_message(filters.command("spam", hl) & filters.user(LEGENDS))
 async def spam_plug(_, m):
     await spam(_, m)
+
+txt += "[module] loaded :- spam"
 
 @END.on_message(filters.command("dspam", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("dspam", hl) & filters.user(LEGENDS))
@@ -59,6 +65,8 @@ async def spam_plug(_, m):
 async def dspam_plug(_, m):
     await dspam(_, m)
 
+txt += "[module] loaded :- dspam"
+
 @END.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
 @END3.on_message(filters.command("addecho", hl)& filters.user(LEGENDS))
@@ -71,6 +79,8 @@ async def dspam_plug(_, m):
 @END10.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
 async def addecho_plug(_, m):
     await addecho(_, m)
+
+txt += "[module] loaded :- addecho"
 
 @END.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
@@ -85,6 +95,8 @@ async def addecho_plug(_, m):
 async def rmecho_plug(_, m):
     await rmecho(_, m)
 
+txt += "[module] loaded :- rmecho"
+
 @END.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
 @END3.on_message(filters.command("raid", hl)& filters.user(LEGENDS))
@@ -97,6 +109,8 @@ async def rmecho_plug(_, m):
 @END10.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
 async def raid_plug(_, m):
     await raid(_, m)
+
+txt += "[module] loaded :- raid"
 
 @END.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
@@ -111,6 +125,8 @@ async def raid_plug(_, m):
 async def replyraid_plug(_, m):
     await replyraid(_, m)
 
+txt += "[module] loaded :- replyraid"
+
 @END.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
 @END3.on_message(filters.command("dreplyraid", hl)& filters.user(LEGENDS))
@@ -123,6 +139,8 @@ async def replyraid_plug(_, m):
 @END10.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
 async def dreplyraid_plug(_, m):
     await dreplyraid(_, m)
+
+txt += "[module] loaded :- dreplyraid"
 
 @END.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
@@ -137,6 +155,8 @@ async def dreplyraid_plug(_, m):
 async def leave_plug(_, m):
     await leave(_, m)
 
+txt += "[module] loaded :- leave"
+
 @END.on_message(filters.command("start", hl))
 @END2.on_message(filters.command("start", hl))
 @END3.on_message(filters.command("start", hl))
@@ -149,3 +169,31 @@ async def leave_plug(_, m):
 @END10.on_message(filters.command("start", hl))
 async def start_plug(_, m):
     await start(_, m)
+
+txt += "[module] loaded :- start"
+
+END.start()
+txt += ":END1: started..!"
+END2.start()
+txt += ":END2: started..!"
+END3.start()
+txt += ":END3: started..!"
+END4.start()
+txt += ":END4: started..!"
+END5.start()
+txt += ":END5: started..!"
+END6.start()
+txt += ":END6: started..!"
+EN7D.start()
+txt += ":END7: started..!"
+END8.start()
+txt += ":END8: started..!"
+END9.start()
+txt += ":END9: started..!"
+END10.start()
+txt += ":END10: started..!"
+try:
+    print(txt)
+except:
+    print("BOT STARTED")
+idle()
