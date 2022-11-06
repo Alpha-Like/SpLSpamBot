@@ -1,6 +1,6 @@
 from pyrogram import Client, filters, idle
 from config import *
-from YashuAlpha.plugins import start, help, cmds_cbq, close_cbq, raid_cbq, help_cbq, spam_cbq
+from YashuAlpha.plugins import start, help, cmds_cbq, close_cbq, raid_cbq, extra_cbq, spam_cbq
 from YashuAlpha.raid import raid, replyraid, dreplyraid, raid_cwf
 from YashuAlpha.data import KeshavX
 from YashuAlpha.spam import spam, dspam
