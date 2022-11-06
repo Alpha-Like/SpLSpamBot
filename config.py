@@ -25,4 +25,5 @@ class DEV:
 
 class STUFF:
     ALIVE_PIC = os.environ["ALIVE_PIC"]
-    PING_PIC = os.environ["PING_PIC"]
+    HELP_PIC = os.environ["HELP_PIC"]
+    START_PIC = os.environ["START_PIC"]
