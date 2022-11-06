@@ -1,5 +1,6 @@
 from pyrogram import InlineKeyboardButton as IKB, InlineKeyboardMarkup as IKM
 from config import DEV, STUFF
+import time
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -23,6 +24,7 @@ START_MARKUP_DEV = IKM(
                ]
                ]
                )  
+
 
 async def start(_, m):
     DEV.SUDO_USERS.append(DEV.OWNER_ID)
