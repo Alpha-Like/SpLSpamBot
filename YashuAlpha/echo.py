@@ -1,6 +1,9 @@
 from config import DEV, STUFF
+from .data import KeshavX
 
 hl = STUFF.COMMAND_HANDLER
+
+LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 ECHO_USERS = []
 async def echo(_, m):
@@ -16,7 +19,7 @@ async def echo(_, m):
                 id = int(x)
     except:
         return await m.reply(f"{hl}addecho [username|id|reply]")
-    if id in (DEV.SUDO_USERS) or id == DEV.OWNER_ID:
+    if id in LEGENDS:
         return await m.reply("CAN'T ECHO THEM !")
     if id in ECHO_USERS:
         return await m.reply("ECHO IS ALREADY ACTIVATED TO THIS USER !")
