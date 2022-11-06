@@ -6,7 +6,7 @@ hl = STUFF.COMMAND_HANDLER
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 ECHO_USERS = []
-async def echo(_, m):
+async def addecho(_, m):
     global ECHO_USERS
     try:
         if m.reply_to_message:
@@ -26,7 +26,7 @@ async def echo(_, m):
     ECHO_USERS.append(id)
     await m.reply("ECHO ACTIVATED TO THE USER" + <code>str(id)</code>)
 
-async def echo(_, m):
+async def rmecho(_, m):
     global ECHO_USERS
     try:
         if m.reply_to_message:
