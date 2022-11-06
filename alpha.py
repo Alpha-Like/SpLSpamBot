@@ -7,6 +7,8 @@ from YashuAlpha.spam import spam, dspam
 from YashuAlpha.echo import addecho, rmecho, echo_cwf
 from YashuAlpha.leave import leave
 
+hl = STUFF.COMMAND_HANDLER
+
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 txt = ""
