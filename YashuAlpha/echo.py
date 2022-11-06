@@ -24,7 +24,7 @@ async def addecho(_, m):
     if id in ECHO_USERS:
         return await m.reply("ECHO IS ALREADY ACTIVATED TO THIS USER !")
     ECHO_USERS.append(id)
-    await m.reply("ECHO ACTIVATED TO THE USER" + <code>str(id)</code>)
+    await m.reply(f"ECHO ACTIVATED TO THE USER <code>{id}</code>")
 
 async def rmecho(_, m):
     global ECHO_USERS
@@ -43,7 +43,7 @@ async def rmecho(_, m):
     if not id in ECHO_USERS:
         return await m.reply("USER NOT IN ECHO LIST !")
     ECHO_USERS.remove(id)
-    await m.reply("ECHO DEACTIVATED TO THE USER" + <code>str(id)</code>)
+    await m.reply(f"ECHO DEACTIVATED TO THE USER <code>{id}</code>")
 
 async def echo_cwf(_, m):
     if m.from_user:
