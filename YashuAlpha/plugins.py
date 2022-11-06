@@ -32,7 +32,7 @@ async def start(_, m):
     bot_name = "𝙀𝙣𝙙 𝙓 𝙎𝙥𝙖𝙢"
     if m.from_user.id in x:
         txt = f"**Hello Boss !!, It's Me {bot_name}, Your Spam Bot !! \n\n Click Below Buttons For Help. 🌚**"
-        await m.reply_photo(STUFF.START_PIC, caption=txt, START_MARKUP_DEV)
+        await m.reply_photo(STUFF.START_PIC, caption=txt, reply_markup=START_MARKUP_DEV)
         return
     if str(m.chat.id)[0] == "-":
         return
