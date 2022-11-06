@@ -82,6 +82,12 @@ async def spam(_, m):
             except Exception as e:
                 print(e)
                 pass
+        elif y.sticker:
+            try:
+                await _.send_sticker(m.chat.id, x)
+            except Exception as e:
+                print(e)
+                pass
         else:
             try:
                 await _.send_message(m.chat.id, txt)
@@ -90,7 +96,7 @@ async def spam(_, m):
                 pass
         asyncio.sleep(0.02)
         
-async def spam(_, m):
+async def dspam(_, m):
     if m.chat.id in GROUP:
         return await m.reply("CAN'T SPAM IN OWNER's GROUP ! 🌝✨")
     if str(m.chat.id)[0] != "-":
@@ -102,30 +108,35 @@ async def spam(_, m):
             x = await _.download_media(y)
             try:
                 count = int(m.text.split()[1])
+                delay = int(m.text.split()[2])
             except:
                 return await m.reply(f"{hl}spam [count]")
         elif y.sticker:
             x = y.sticker.id
             try:
                 count = int(m.text.split()[1])
+                delay = int(m.text.split()[2])
             except:
                 return await m.reply(f"{hl}spam [count]")
         elif y.video:
             x = await _.download_media(y)
             try:
-                txt = m.text.split(None, 1)[1]
+                count = int(m.text.split()[1])
+                delay = int(m.text.split()[2])
             except:
                 txt = None  
         elif y.document:
             x = await _.download_media(y)
             try:
                 count = int(m.text.split()[1])
+                delay = int(m.text.split()[2])
             except:
                 return await m.reply(f"{hl}spam [count]")
         elif y.audio:
             x = await _.download_media(y)
             try:
                 count = int(m.text.split()[1])
+                delay = int(m.text.split()[2])
             except:
                 return await m.reply(f"{hl}spam [count]")
         else:
