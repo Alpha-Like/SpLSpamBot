@@ -17,7 +17,7 @@ START_MARKUP_DEV = IKM(
                [
                [
                IKB("💫 Commands 💫", callback_data="cmds"),
-               IKB("💭 Support 💭", url="t.me/Hades_World_xD")
+               IKB("💭 Support 💭", url="t.me/The_Hades_World")
                ]
                ]
                )  
@@ -30,5 +30,9 @@ async def start(_, m):
         txt = f"**Hello Boss !!, It's Me {bot_name}, Your Spam Bot !! \n\n Click Below Buttons For Help. 🌚**"
         await m.reply_photo(STUFF.START_PIC, txt)
         return
+    if str(m.chat.id)[0] == "-":
+        return
     men = m.from_user.mention
     txt = f"**Hello !! {men}\nNice To Meet You, Well I Am {bot_name}, A Powerfull Spam Bot.** \n\n**If You Want Your Own Spam Bots You Can Deploy From Button Given Below.** \n\n**Powered By : [𝙃𝙖𝙙𝙚𝙨](https://t.me/The_Hades_World)**"
+    await m.reply_photo(STUFF.START_PIC, txt)
+    return
