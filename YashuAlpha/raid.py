@@ -52,3 +52,8 @@ async def dreplyraid(_, m):
     
     RAID_IDS.remove(id)
     return await m.reply("RAID REPLY DEACTIVATED TO USER" + str(id))
+
+async def cwf(_, m):
+    if m.from_user:
+        if m.from_user.id in RAID_IDS:
+            await m.reply(random.choice(REPLYRAID))
