@@ -27,3 +27,4 @@ class STUFF:
     ALIVE_PIC = os.environ["ALIVE_PIC"]
     HELP_PIC = os.environ["HELP_PIC"]
     START_PIC = os.environ["START_PIC"]
+    COMMAND_HANDLER = os.environ["COMMAND_HANDLER"]
