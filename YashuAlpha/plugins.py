@@ -136,17 +136,32 @@ CLOSE_MARKUP = IKM(
                )
 
 async def cmds_cbq(_, q):
+    if not q.from_user.id in LEGENDS:
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
     await q.edit_message_text(text=HELP_TEXT, reply_markup=HELP_MARKUP)
 
 async def spam_cbq(_, q):
+    if not q.from_user.id in LEGENDS:
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
     await q.edit_message_text(text=SPAM_HELP, reply_markup=CLOSE_MARKUP)
 
 async def raid_cbq(_, q):
+    if not q.from_user.id in LEGENDS:
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
     await q.edit_message_text(text=RAID_HELP, reply_markup=CLOSE_MARKUP)
 
 async def extra_cbq(_, q):
+    if not q.from_user.id in LEGENDS:
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
     await q.edit_message_text(text=EXTRA_HELP, reply_markup=CLOSE_MARKUP)
 
 async def close_cbq(_, q):
+    if not q.from_user.id in LEGENDS:
+        return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
+    await q.answer()
     await q.message.delete()
 
