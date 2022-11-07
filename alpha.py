@@ -159,16 +159,16 @@ async def leave_plug(_, m):
 
 txt += "\n[module] loaded :- leave"
 
-@END.on_message(filters.command("start", hl))
-@END2.on_message(filters.command("start", hl))
-@END3.on_message(filters.command("start", hl))
-@END4.on_message(filters.command("start", hl))
-@END5.on_message(filters.command("start", hl))
-@END6.on_message(filters.command("start", hl))
-@END7.on_message(filters.command("start", hl))
-@END8.on_message(filters.command("start", hl))
-@END9.on_message(filters.command("start", hl))
-@END10.on_message(filters.command("start", hl))
+@END.on_message(filters.command("start", [hl, "/"]))
+@END2.on_message(filters.command("start", [hl, "/"]))
+@END3.on_message(filters.command("start", [hl, "/"]))
+@END4.on_message(filters.command("start", [hl, "/"]))
+@END5.on_message(filters.command("start", [hl, "/"]))
+@END6.on_message(filters.command("start", [hl, "/"]))
+@END7.on_message(filters.command("start", [hl, "/"]))
+@END8.on_message(filters.command("start", [hl, "/"]))
+@END9.on_message(filters.command("start", [hl, "/"]))
+@END10.on_message(filters.command("start", [hl, "/"]))
 async def start_plug(_, m):
     await start(_, m)
 
