@@ -58,7 +58,7 @@ async def dreplyraid(_, m):
     except:
         return await m.reply(f"{hl}dreplyraid [id|username|reply]")
     
-    if id in RAID_IDS:
+    if not id in RAID_IDS:
         return await m.reply("RAID IS NOT ACTIVATED TO THIS USER !")
     RAID_IDS.remove(id)
     return await m.reply(f"RAID REPLY DEACTIVATED TO USER <code>{id}</code>")
