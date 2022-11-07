@@ -277,30 +277,37 @@ txt += "\n[module] loaded :- echo_cwf"
 async def raid_cwf_plug(_, m):
     await raid_cwf(_, m)
 
-txt += "\n[module] loaded :- echo_cwf"
+txt += "\n[module] loaded :- raid_cwf"
 
 END.run()
 txt += "\n:END1: started..!"
-"""
+time.sleep(2)
 END2.run()
-txt += ":END2: started..!"
+txt += "\n:END2: started..!"
+time.sleep(2)
 END3.run()
-txt += ":END3: started..!"
+txt += "\n:END3: started..!"
+time.sleep(2)
 END4.run()
-txt += ":END4: started..!"
+txt += "\n:END4: started..!"
+time.sleep(2)
 END5.run()
-txt += ":END5: started..!"
+txt += "\n:END5: started..!"
+time.sleep(2)
 END6.run()
-txt += ":END6: started..!"
+txt += "\n:END6: started..!"
+time.sleep(2)
 END7.run()
-txt += ":END7: started..!"
+txt += "\n:END7: started..!"
+time.sleep(2)
 END8.run()
-txt += ":END8: started..!"
+txt += "\n:END8: started..!"
+time.sleep(2)
 END9.run()
-txt += ":END9: started..!"
+txt += "\n:END9: started..!"
+time.sleep(2)
 END10.run()
-txt += ":END10: started..!"
-"""
+txt += "\n:END10: started..!"
 try:
     print(txt)
 except:
