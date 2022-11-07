@@ -1,8 +1,11 @@
 from pyrogram.types import InlineKeyboardButton as IKB, InlineKeyboardMarkup as IKM
 from config import DEV, STUFF
 import time
+from .data import KeshavX
 
 hl = STUFF.COMMAND_HANDLER
+
+LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 START_MARKUP_STR = IKM(
                [
