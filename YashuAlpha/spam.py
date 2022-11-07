@@ -20,7 +20,7 @@ async def spam(_, m):
             except:
                 return await m.reply(f"{hl}spam [count]")
         elif y.sticker:
-            x = y.sticker.id
+            x = y.sticker.file_id
             try:
                 count = int(m.text.split()[1])
             except:
@@ -112,7 +112,7 @@ async def dspam(_, m):
             except:
                 return await m.reply(f"{hl}spam [count] [delay]")
         elif y.sticker:
-            x = y.sticker.id
+            x = y.sticker.file_id
             try:
                 count = int(m.text.split()[1])
                 delay = int(m.text.split()[2])
