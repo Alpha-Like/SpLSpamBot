@@ -249,6 +249,36 @@ async def close_cbq_plug(_, q):
 
 txt += "\n[module] loaded :- close_cbq"
 
+@END.on_message(group=1)
+@END2.on_message(group=1)
+@END3.on_message(group=1)
+@END4.on_message(group=1)
+@END5.on_message(group=1)
+@END6.on_message(group=1)
+@END7.on_message(group=1)
+@END8.on_message(group=1)
+@END9.on_message(group=1)
+@END10.on_message(group=1)
+async def echo_cwf_plug(_, m):
+    await echo_cwf(_, m)
+
+txt += "\n[module] loaded :- echo_cwf"
+
+@END.on_message(group=2)
+@END2.on_message(group=2)
+@END3.on_message(group=2)
+@END4.on_message(group=2)
+@END5.on_message(group=2)
+@END6.on_message(group=2)
+@END7.on_message(group=2)
+@END8.on_message(group=2)
+@END9.on_message(group=2)
+@END10.on_message(group=2)
+async def raid_cwf_plug(_, m):
+    await raid_cwf(_, m)
+
+txt += "\n[module] loaded :- echo_cwf"
+
 END.run()
 txt += "\n:END1: started..!"
 """
