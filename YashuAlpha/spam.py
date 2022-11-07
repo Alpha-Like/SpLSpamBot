@@ -14,7 +14,7 @@ async def spam(_, m):
     if y:
         txt = None
         if y.photo:
-            x = await _.download_media(y)
+            x = await _.download_media(y, file_name="xD")
             try:
                 count = int(m.text.split()[1])
             except:
@@ -26,19 +26,19 @@ async def spam(_, m):
             except:
                 return await m.reply(f"{hl}spam [count]")
         elif y.video:
-            x = await _.download_media(y)
+            x = await _.download_media(y, file_name="xD")
             try:
                 txt = m.text.split(None, 1)[1]
             except:
                 txt = None  
         elif y.document:
-            x = await _.download_media(y)
+            x = await _.download_media(y, file_name="xD")
             try:
                 count = int(m.text.split()[1])
             except:
                 return await m.reply(f"{hl}spam [count]")
         elif y.audio:
-            x = await _.download_media(y)
+            x = await _.download_media(y, file_name="xD")
             try:
                 count = int(m.text.split()[1])
             except:
@@ -58,6 +58,7 @@ async def spam(_, m):
             return await m.reply(f"{hl}spam [count] [text]")
 
     for x in range(0, count):
+        x = "downloads/xD"
         if y.photo:
             try:
                 await _.send_photo(m.chat.id, x)
