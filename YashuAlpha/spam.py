@@ -94,7 +94,7 @@ async def spam(_, m):
             except Exception as e:
                 print(e)
                 pass
-        asyncio.sleep(0.02)
+        await asyncio.sleep(0.02)
         
 async def dspam(_, m):
     if m.chat.id in GROUP:
