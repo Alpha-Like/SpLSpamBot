@@ -155,7 +155,7 @@ async def dspam(_, m):
         except:
             return await m.reply(f"{hl}spam [count] [delay] [text]")
 
-    for x in range(0, count):
+    for f in range(0, count):
         if y.photo:
             try:
                 await _.send_photo(m.chat.id, x)
