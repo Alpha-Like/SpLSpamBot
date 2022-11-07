@@ -110,11 +110,11 @@ Command :
 HELP_MARKUP = IKM(
               [
               [
-              IKB("⚡️ Spam ⚡️", callback_data="spam_help"),
-              IKB("🔥 Raid 🔥", callback_data="raid_help")
+              IKB("⚡️ Spam ⚡️", callback_data="spam"),
+              IKB("🔥 Raid 🔥", callback_data="raid")
               ],
               [
-              IKB("💭 Extras 💭", callback_data="extra_help")
+              IKB("💭 Extras 💭", callback_data="extra")
               ],
               [
               IKB("😶‍🌫️ Owner 😶‍🌫️", url="t.me/Asynchorous"),
