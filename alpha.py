@@ -176,6 +176,7 @@ txt += "[module] loaded :- start"
 
 END.run()
 txt += ":END1: started..!"
+"""
 END2.run()
 txt += ":END2: started..!"
 END3.run()
@@ -194,8 +195,8 @@ END9.run()
 txt += ":END9: started..!"
 END10.run()
 txt += ":END10: started..!"
+"""
 try:
     print(txt)
 except:
     print("BOT STARTED")
-idle()
