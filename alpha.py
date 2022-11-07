@@ -52,7 +52,7 @@ txt += "[module] loaded :- help"
 async def spam_plug(_, m):
     await spam(_, m)
 
-txt += "[module] loaded :- spam"
+txt += "\n[module] loaded :- spam"
 
 @END.on_message(filters.command("dspam", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("dspam", hl) & filters.user(LEGENDS))
@@ -67,7 +67,7 @@ txt += "[module] loaded :- spam"
 async def dspam_plug(_, m):
     await dspam(_, m)
 
-txt += "[module] loaded :- dspam"
+txt += "\n[module] loaded :- dspam"
 
 @END.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
@@ -82,7 +82,7 @@ txt += "[module] loaded :- dspam"
 async def addecho_plug(_, m):
     await addecho(_, m)
 
-txt += "[module] loaded :- addecho"
+txt += "\n[module] loaded :- addecho"
 
 @END.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
@@ -97,7 +97,7 @@ txt += "[module] loaded :- addecho"
 async def rmecho_plug(_, m):
     await rmecho(_, m)
 
-txt += "[module] loaded :- rmecho"
+txt += "\n[module] loaded :- rmecho"
 
 @END.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
@@ -112,7 +112,7 @@ txt += "[module] loaded :- rmecho"
 async def raid_plug(_, m):
     await raid(_, m)
 
-txt += "[module] loaded :- raid"
+txt += "\n[module] loaded :- raid"
 
 @END.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("replyraid", hl) & filters.user(LEGENDS))
@@ -127,7 +127,7 @@ txt += "[module] loaded :- raid"
 async def replyraid_plug(_, m):
     await replyraid(_, m)
 
-txt += "[module] loaded :- replyraid"
+txt += "\n[module] loaded :- replyraid"
 
 @END.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("dreplyraid", hl) & filters.user(LEGENDS))
@@ -142,7 +142,7 @@ txt += "[module] loaded :- replyraid"
 async def dreplyraid_plug(_, m):
     await dreplyraid(_, m)
 
-txt += "[module] loaded :- dreplyraid"
+txt += "\n[module] loaded :- dreplyraid"
 
 @END.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("leave", hl) & filters.user(LEGENDS))
@@ -157,7 +157,7 @@ txt += "[module] loaded :- dreplyraid"
 async def leave_plug(_, m):
     await leave(_, m)
 
-txt += "[module] loaded :- leave"
+txt += "\n[module] loaded :- leave"
 
 @END.on_message(filters.command("start", hl))
 @END2.on_message(filters.command("start", hl))
@@ -172,10 +172,10 @@ txt += "[module] loaded :- leave"
 async def start_plug(_, m):
     await start(_, m)
 
-txt += "[module] loaded :- start"
+txt += "\n[module] loaded :- start"
 
 END.run()
-txt += ":END1: started..!"
+txt += "\n:END1: started..!"
 """
 END2.run()
 txt += ":END2: started..!"
