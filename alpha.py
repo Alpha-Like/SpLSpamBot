@@ -174,25 +174,25 @@ async def start_plug(_, m):
 
 txt += "[module] loaded :- start"
 
-END.start()
+END.run()
 txt += ":END1: started..!"
-END2.start()
+END2.run()
 txt += ":END2: started..!"
-END3.start()
+END3.run()
 txt += ":END3: started..!"
-END4.start()
+END4.run()
 txt += ":END4: started..!"
-END5.start()
+END5.run()
 txt += ":END5: started..!"
-END6.start()
+END6.run()
 txt += ":END6: started..!"
-END7.start()
+END7.run()
 txt += ":END7: started..!"
-END8.start()
+END8.run()
 txt += ":END8: started..!"
-END9.start()
+END9.run()
 txt += ":END9: started..!"
-END10.start()
+END10.run()
 txt += ":END10: started..!"
 try:
     print(txt)
