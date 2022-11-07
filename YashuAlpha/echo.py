@@ -52,7 +52,7 @@ async def echo_cwf(_, m):
                 txt = m.text
                 await m.reply(txt)
             elif m.sticker:
-                id = m.sticker.id
+                id = m.sticker.file_id
                 await m.reply_sticker(id)
             elif m.photo:
                 x = await _.download_media(m)
