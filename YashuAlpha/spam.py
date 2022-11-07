@@ -53,7 +53,7 @@ async def spam(_, m):
     else:
         try:
             count = int(m.text.split()[1])
-            txt = m.text.split(None, 1)[2]
+            txt = m.text.split(None, 2)[2]
         except:
             return await m.reply(f"{hl}spam [count] [text]")
 
