@@ -278,33 +278,14 @@ async def raid_cwf_plug(_, m):
 
 print("\n[module] loaded :- raid_cwf")
 
-END.run()
-print("\n:END1: started..!")
-time.sleep(2)
-END2.run()
-print("\n:END2: started..!")
-time.sleep(2)
-END3.run()
-print("\n:END3: started..!")
-time.sleep(2)
-END4.run()
-print("\n:END4: started..!")
-time.sleep(2)
-END5.run()
-print("\n:END5: started..!")
-time.sleep(2)
-END6.run()
-print("\n:END6: started..!")
-time.sleep(2)
-END7.run()
-print("\n:END7: started..!")
-time.sleep(2)
-END8.run()
-print("\n:END8: started..!")
-time.sleep(2)
-END9.run()
-print("\n:END9: started..!")
-time.sleep(2)
-END10.run()
-print("\n:END10: started..!")
+def Asynchorous():
+    a = 1
+    Clients = [END, END2, END3, END4, END5, END6, END7, END8, END9, END10]
+    for x in Clients:
+        if a == 11:
+            break
+        x.run()
+        print(f":END{a}: started...!")
+        a += 1
 
+Asynchorous()
