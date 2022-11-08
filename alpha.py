@@ -284,8 +284,9 @@ def Asynchorous():
     for x in Clients:
         if a == 11:
             break
-        x.run()
-        print(f":END{a}: started...!")
-        a += 1
+        if __name__ == "__main__":
+            x.run()
+            print(f":END{a}: started...!")
+            a += 1
 
 Asynchorous()
