@@ -101,6 +101,21 @@
       "description": "ENTER ID OF BOT OWNER !",
       "required": true,
       "value": ""
+    },
+    "ALIVE_PIC": {
+      "description": "Link of Image !",
+      "required": true,
+      "value": ""
+    },
+    "HELP_PIC": {
+      "description": "Link of Image !",
+      "required": true,
+      "value": ""
+    },
+    "START_PIC": {
+      "description": "Link of Image !",
+      "required": true,
+      "value": ""
     }
   }
 }
