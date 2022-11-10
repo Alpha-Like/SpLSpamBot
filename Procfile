@@ -1,1 +1,1 @@
-worker: python3 alpha.py
+worker: python3 -m EndSpam
