@@ -1,0 +1,106 @@
+{
+  "name": "AFK Bot By Hades Network !",
+  "description": "Pyrogram based AFK by Hades !",
+  "logo": "https://te.legra.ph/file/2f370ea06233326280613.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram"
+  ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+  "repository": "https://github.com/Timeisnotwaiting/HadesAfk",
+  "env": {
+    "API_ID": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN_2": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN_3": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN_4": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN_5": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN_6": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN_7": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN_8": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN_9": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "BOT_TOKEN_10": {
+      "description": "Obtain a Telegram bot token by contacting @BotFather",
+      "required": true,
+      "value": ""
+    },
+    "COMMAND_HANDLER": {
+      "description": "!, ., !",
+      "required": true,
+      "value": "!"
+    },
+    "SUDO_USERS": {
+      "description": "SPLIT IF MORE THAN 1",
+      "required": true,
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "ENTER ID OF BOT OWNER !",
+      "required": true,
+      "value": ""
+    }
+  }
+}
