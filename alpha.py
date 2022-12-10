@@ -285,8 +285,9 @@ def Asynchorous():
         if a == 11:
             break
         if __name__ == "__main__":
-            x.run()
+            x.start()
             print(f":END{a}: started...!")
             a += 1
+    idle()
 
 Asynchorous()
