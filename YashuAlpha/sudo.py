@@ -1,9 +1,14 @@
 from YashuAlpha.Database.sudo import add_sudo, del_sudo, is_sudo, get_sudos
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import STUFF
+from config import STUFF, DEV
+
+SUDO = DEV.SUDO_USERS
 
 hl = STUFF.COMMAND_HANDLER
+
+async def eor(m, t):
+    await m.reply(t)
 
 async def get_id(_, m):
     if str(m.chat.id)[0] != "-":
@@ -20,6 +25,7 @@ async def get_id(_, m):
     return id 
 
 async def add_or_del_sudo(_, m):
+    global SUDO
     try:
         id = await get_id(_, m)
     except:
@@ -29,10 +35,12 @@ async def add_or_del_sudo(_, m):
         if not sudo:
             return await eor(m, f"<i>This user isn't sudo..!</i>")
         await del_sudo(id)
+        SUDO = await get_sudos()
         return await eor(m, f"<i>Sudo removed for the user {id} .</i>")
     if sudo:
         return await eor(m, f"<i>{id} is already a sudo user..!</i>")
     await add_sudo(id)
+    SUDO = await get_sudos()
     return await eor(m, f"<i>{id} is added to sudo...!</i>")
 
 async def sudo_users(_, m):
