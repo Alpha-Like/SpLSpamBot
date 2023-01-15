@@ -4,7 +4,7 @@ import time
 from YashuAlpha.plugins import start, help, cmds_cbq, close_cbq, raid_cbq, extra_cbq, spam_cbq
 from YashuAlpha.raid import raid, replyraid, dreplyraid, raid_cwf
 from YashuAlpha.data import KeshavX
-from YashuAlpha.spam import spam, dspam
+from YashuAlpha.spam import spam_func, dspam_func
 from YashuAlpha.echo import addecho, rmecho, echo_cwf
 from YashuAlpha.leave import leave
 from YashuAlpha.sudo import add_or_del_sudo, sudo_users
@@ -52,7 +52,7 @@ print("[module] loaded :- help")
 @END9.on_message(filters.command("spam", hl) & filters.user(LEGENDS))
 @END10.on_message(filters.command("spam", hl) & filters.user(LEGENDS))
 async def spam_plug(_, m):
-    await spam(_, m)
+    await spam_func(_, m)
 
 print("\n[module] loaded :- spam")
 
@@ -67,7 +67,7 @@ print("\n[module] loaded :- spam")
 @END9.on_message(filters.command("dspam", hl) & filters.user(LEGENDS))
 @END10.on_message(filters.command("dspam", hl) & filters.user(LEGENDS))
 async def dspam_plug(_, m):
-    await dspam(_, m)
+    await dspam_func(_, m)
 
 print("\n[module] loaded :- dspam")
 
