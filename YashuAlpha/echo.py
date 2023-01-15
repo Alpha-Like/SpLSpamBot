@@ -45,7 +45,7 @@ async def rmecho(_, m):
 
 async def echo_cwf(_, m):
     if m.from_user:
-        if m.from_user.id in ECHO_USERS:
+        if await is_echo(m.from_user.id):
             if m.text:
                 txt = m.text
                 await m.reply(txt)
@@ -53,7 +53,28 @@ async def echo_cwf(_, m):
                 id = m.sticker.file_id
                 await m.reply_sticker(id)
             elif m.photo:
-                x = await _.download_media(m)
-                await m.reply_photo(x)
+                id = m.photo.file_id
+                caption = m.caption if m.caption else ""
+                await m.reply_photo(id, caption=caption)
+            elif m.video:
+                id = m.video.file_id
+                caption = m.caption if m.caption else ""
+                await m.reply_video(id, caption=caption)
+            elif m.animation:
+                id = m.animation.file_id
+                caption = m.caption if m.caption else ""
+                await m.reply_animation(id, caption=caption)
+            elif m.document:
+                id = m.document.file_id
+                caption = m.caption if m.caption else ""
+                await m.reply_document(id, caption=caption)
+            elif m.audio:
+                id = m.audio.file_id
+                caption = m.caption if m.caption else ""
+                await m.reply_audio(id, caption=caption)
+            elif m.voice:
+                id = m.voice.file_id
+                caption = m.caption if m.caption else ""
+                await m.reply_voice(id, caption=caption)
             else:
                 pass
