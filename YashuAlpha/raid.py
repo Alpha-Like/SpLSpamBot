@@ -3,6 +3,7 @@ import random
 from config import STUFF, DEV
 import asyncio
 from .data import KeshavX
+from YashuAlpha.Database.replyraid import *
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -23,9 +24,7 @@ async def raid(_, m):
             await _.send_message(m.chat.id, raid)
         await asyncio.sleep(0.02)
 
-RAID_IDS = []
 async def replyraid(_, m):
-    global RAID_IDS
     try:
         if m.reply_to_message:
             id = m.reply_to_message.from_user.id
@@ -36,13 +35,13 @@ async def replyraid(_, m):
             else:
                 id = int(x)
     except:
-        return await m.reply(f"{hl}replyraid [id|username|reply]")
+        return await m.reply(f"`{hl}replyraid [id|username|reply]`")
     if id in LEGENDS:
-        return await m.reply("CAN'T RAID THEM !")
-    if id in RAID_IDS:
-        return await m.reply("RAID IS ALREADY ACTIVATED TO THIS USER !")
-    RAID_IDS.append(id)
-    return await m.reply(f"RAID REPLY ACTIVATED TO USER <code>{id}</code>")
+        return await m.reply("`CAN'T RAID THEM !`")
+    if await is rr(id):
+        return await m.reply("`RAID IS ALREADY ACTIVATED TO THIS USER !`")
+    await add_rr(id)
+    return await m.reply(f"`RAID REPLY ACTIVATED TO USER `<code>{id}</code>")
     
 async def dreplyraid(_, m):
     global RAID_IDS
