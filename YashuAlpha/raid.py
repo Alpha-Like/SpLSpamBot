@@ -63,5 +63,5 @@ async def dreplyraid(_, m):
 
 async def raid_cwf(_, m):
     if m.from_user:
-        if m.from_user.id in RAID_IDS:
+        if await is_rr(m.from_user.id):
             await m.reply(random.choice(REPLYRAID))
