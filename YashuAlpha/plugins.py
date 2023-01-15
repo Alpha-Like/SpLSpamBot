@@ -10,8 +10,8 @@ LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 START_MARKUP_STR = IKM(
                [
                [
-               IKB("💭 Owner 💭", url="t.me/Asynchorous"),
-               IKB("✨ Support ✨", url="t.me/The_Hades_World")
+               IKB("💭 Owner 💭", url="t.me/NotKeshav"),
+               IKB("✨ Support ✨", url="t.me/SpLBots")
                ],
                [
                IKB("🔥 Repo 🔥", url="https://github.com/Timeisnotwaiting/EndSpamBot")
@@ -23,7 +23,7 @@ START_MARKUP_DEV = IKM(
                [
                [
                IKB("💫 Commands 💫", callback_data="cmds"),
-               IKB("💭 Support 💭", url="t.me/The_Hades_World")
+               IKB("💭 Support 💭", url="t.me/SpLBots")
                ]
                ]
                )  
@@ -59,7 +59,7 @@ Command :
 1) {hl}delayspam <delay> <count> <message to spam> (you can reply any message if you want bot to reply that message and do spamming)
 2) {hl}delayspam <delay> <count> <replying any message>
 
-** © @Asynchorous**
+** © @NotKeshav**
 """
 
 RAID_HELP = f"""
@@ -86,7 +86,7 @@ Command :
 2) {hl}dreplyraid <username>
 
 
-**© @Asynchorous**
+**© @NotKeshav**
 """
 
 EXTRA_HELP = f"""
@@ -107,7 +107,7 @@ Command :
 1) {hl}leave <group/chat id>
 2) {hl}leave : Type in the Group bot will auto leave that group
 
-**© @Asynchorous**
+**© @NotKeshav**
 """
 
 HELP_MARKUP = IKM(
@@ -120,8 +120,8 @@ HELP_MARKUP = IKM(
               IKB("💭 Extras 💭", callback_data="extra")
               ],
               [
-              IKB("😶‍🌫️ Owner 😶‍🌫️", url="t.me/Asynchorous"),
-              IKB("✨ Support ✨", url="t.me/The_Hades_World")
+              IKB("😶‍🌫️ Owner 😶‍🌫️", url="t.me/NotKeshav"),
+              IKB("✨ Support ✨", url="t.me/SpLBots")
               ]
               ]
               )
