@@ -84,6 +84,21 @@ print("\n[module] loaded :- dspam")
 async def sudo_plug(_, m):
     await add_or_del_sudo(_, m)
 
+@END.on_message(filters.command("sudos", hl) & filters.user(LEGENDS))
+@END2.on_message(filters.command("sudos", hl) & filters.user(LEGENDS))
+@END3.on_message(filters.command("sudos", hl)& filters.user(LEGENDS))
+@END4.on_message(filters.command("sudos", hl) & filters.user(LEGENDS))
+@END5.on_message(filters.command("sudos", hl) & filters.user(LEGENDS))
+@END6.on_message(filters.command("sudos", hl) & filters.user(LEGENDS))
+@END7.on_message(filters.command("sudos", hl) & filters.user(LEGENDS))
+@END8.on_message(filters.command("sudos", hl) & filters.user(LEGENDS))
+@END9.on_message(filters.command("sudos", hl) & filters.user(LEGENDS))
+@END10.on_message(filters.command("sudos", hl) & filters.user(LEGENDS))
+async def gsudo_plug(_, m):
+    await sudo_users(_, m)
+
+print("\n[module] loaded :- sudos")
+
 @END.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
 @END3.on_message(filters.command("addecho", hl)& filters.user(LEGENDS))
