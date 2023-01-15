@@ -7,10 +7,13 @@ from YashuAlpha.data import KeshavX
 from YashuAlpha.spam import spam, dspam
 from YashuAlpha.echo import addecho, rmecho, echo_cwf
 from YashuAlpha.leave import leave
+from YashuAlpha.sudo import add_or_del_sudo, sudo_users
 
 hl = STUFF.COMMAND_HANDLER
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
+
+LEGEND = DEV.OWNER_ID
 
 END = Client(":END:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN)
 END2 = Client(":END2:", api_id=API.API_ID, api_hash=API.API_HASH, bot_token=TOKENS.BOT_TOKEN_2)
@@ -67,6 +70,19 @@ async def dspam_plug(_, m):
     await dspam(_, m)
 
 print("\n[module] loaded :- dspam")
+
+@END.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
+@END2.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
+@END3.on_message(filters.command(["addsudo", "rmsudo"], hl)& filters.user(LEGEND))
+@END4.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
+@END5.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
+@END6.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
+@END7.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
+@END8.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
+@END9.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
+@END10.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
+async def sudo_plug(_, m):
+    await add_or_del_sudo(_, m)
 
 @END.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("addecho", hl) & filters.user(LEGENDS))
