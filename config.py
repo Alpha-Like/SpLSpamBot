@@ -16,6 +16,9 @@ class TOKENS:
     BOT_TOKEN_9 = os.environ["BOT_TOKEN_9"]
     BOT_TOKEN_10 = os.environ["BOT_TOKEN_10"]
 
+class DATABASE:
+    MONGO_DB_URL = os.environ["MONGO_DB_URL"]
+
 class DEV:
     OWNER_ID = int(os.environ["OWNER_ID"])
     SUDO_USERS_STR = os.environ["SUDO_USERS"].split()
