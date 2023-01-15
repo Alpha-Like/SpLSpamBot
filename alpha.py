@@ -129,6 +129,19 @@ async def rmecho_plug(_, m):
 
 print("\n[module] loaded :- rmecho")
 
+@END.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
+@END2.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
+@END3.on_message(filters.command("echos", hl)& filters.user(LEGENDS))
+@END4.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
+@END5.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
+@END6.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
+@END7.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
+@END8.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
+@END9.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
+@END10.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
+async def echos_plug(_, m):
+    await echos(_, m)
+
 @END.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
 @END3.on_message(filters.command("raid", hl)& filters.user(LEGENDS))
