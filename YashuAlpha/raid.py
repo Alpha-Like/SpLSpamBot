@@ -44,7 +44,6 @@ async def replyraid(_, m):
     return await m.reply(f"`RAID REPLY ACTIVATED TO USER `<code>{id}</code>")
     
 async def dreplyraid(_, m):
-    global RAID_IDS
     try:
         if m.reply_to_message:
             id = m.reply_to_message.from_user.id
@@ -55,12 +54,12 @@ async def dreplyraid(_, m):
             else:
                 id = int(x)
     except:
-        return await m.reply(f"{hl}dreplyraid [id|username|reply]")
+        return await m.reply(f"`{hl}dreplyraid [id|username|reply]`")
     
-    if not id in RAID_IDS:
-        return await m.reply("RAID IS NOT ACTIVATED TO THIS USER !")
-    RAID_IDS.remove(id)
-    return await m.reply(f"RAID REPLY DEACTIVATED TO USER <code>{id}</code>")
+    if not await is_rr(id):
+        return await m.reply("`RAID IS NOT ACTIVATED TO THIS USER !`")
+    await del_rr(id)
+    return await m.reply(f"`RAID REPLY DEACTIVATED TO USER `<code>{id}</code>")
 
 async def raid_cwf(_, m):
     if m.from_user:
