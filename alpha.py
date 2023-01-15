@@ -8,6 +8,7 @@ from YashuAlpha.spam import spam_func, dspam_func
 from YashuAlpha.echo import addecho, rmecho, echo_cwf
 from YashuAlpha.leave import leave
 from YashuAlpha.sudo import add_or_del_sudo, sudo_users
+from YashuAlpha.alive_ping import ping
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -40,6 +41,21 @@ async def help_plug(_, m):
     await help(_, m)
 
 print("[module] loaded :- help")
+
+@END.on_message(filters.command("ping", hl) & filters.user(LEGENDS))
+@END2.on_message(filters.command("ping", hl) & filters.user(LEGENDS))
+@END3.on_message(filters.command("ping", hl)& filters.user(LEGENDS))
+@END4.on_message(filters.command("ping", hl) & filters.user(LEGENDS))
+@END5.on_message(filters.command("ping", hl) & filters.user(LEGENDS))
+@END6.on_message(filters.command("ping", hl) & filters.user(LEGENDS))
+@END7.on_message(filters.command("ping", hl) & filters.user(LEGENDS))
+@END8.on_message(filters.command("ping", hl) & filters.user(LEGENDS))
+@END9.on_message(filters.command("ping", hl) & filters.user(LEGENDS))
+@END10.on_message(filters.command("ping", hl) & filters.user(LEGENDS))
+async def ping_plug(_, m):
+    await ping(_, m)
+
+print("\n[module] loaded :- ping")
 
 @END.on_message(filters.command("spam", hl) & filters.user(LEGENDS))
 @END2.on_message(filters.command("spam", hl) & filters.user(LEGENDS))
