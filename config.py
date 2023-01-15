@@ -21,10 +21,7 @@ class DATABASE:
 
 class DEV:
     OWNER_ID = int(os.environ["OWNER_ID"])
-    SUDO_USERS_STR = os.environ["SUDO_USERS"].split()
-    SUDO_USERS = []
-    for x in SUDO_USERS_STR:
-        SUDO_USERS.append(int(x))
+    SUDO_USERS = [] # DONT EDIT THIS 
 
 class STUFF:
     ALIVE_PIC = os.environ["ALIVE_PIC"]
