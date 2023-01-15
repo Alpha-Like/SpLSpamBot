@@ -4,10 +4,13 @@ from config import STUFF, DEV
 import asyncio
 from .data import KeshavX
 from YashuAlpha.Database.replyraid import *
+from YashuAlpha.Database.sudo import get_sudos
 
 hl = STUFF.COMMAND_HANDLER
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
+
+SUDOS = DEV.SUDO_USERS
 
 async def raid(_, m):
     try:
@@ -62,6 +65,9 @@ async def dreplyraid(_, m):
     return await m.reply(f"`RAID REPLY DEACTIVATED TO USER `<code>{id}</code>")
 
 async def raid_cwf(_, m):
+    global SUDOS
+    if not SUDOS:
+        SUDOS = await get_sudos()
     if m.from_user:
         if await is_rr(m.from_user.id):
             await m.reply(random.choice(REPLYRAID))
