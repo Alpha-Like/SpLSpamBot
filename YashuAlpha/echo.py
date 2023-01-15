@@ -78,3 +78,14 @@ async def echo_cwf(_, m):
                 await m.reply_voice(id, caption=caption)
             else:
                 pass
+
+async def echos(_, m):
+    x = await get_echos()
+    if not x:
+        await m.reply("`No user is added to echo !`")
+    txt = "**Echo Users :**\n\n"
+    for y in x:
+        txt += f"`{y}`\n"
+    txt += "\n"
+    txt += f"**Count : {len(x)}**"
+    await m.reply(txt)
