@@ -2,6 +2,7 @@ from YashuAlpha.Database.sudo import add_sudo, del_sudo, is_sudo, get_sudos
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from config import STUFF, DEV
+from .verify import verify
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -39,6 +40,8 @@ async def add_or_del_sudo(_, m):
     return await eor(m, f"<i>{id} is added to sudo...!</i>")
 
 async def sudo_users(_, m):
+    if not await verify(m.from_user.id):
+        return
     SUDOS = await get_sudos()
     if not SUDOS:
         return await eor(m, f"<i>No sudo users..!</i>")
