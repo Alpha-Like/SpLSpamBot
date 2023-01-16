@@ -236,6 +236,8 @@ async def dspam_func(_, m):
     SPAM = False
 
 async def spam_stop(_, m):
+    if not await verify(m.from_user.id):
+        return
     global SPAM, STOP
     if not SPAM:
         return await m.reply("`No ongoing spam...`")
