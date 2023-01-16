@@ -146,6 +146,19 @@ print("\n[module] loaded :- rmecho")
 async def echos_plug(_, m):
     await echos(_, m)
 
+@END.on_message(filters.command("stop", hl))
+@END2.on_message(filters.command("stop", hl))
+@END3.on_message(filters.command("stop", hl))
+@END4.on_message(filters.command("stop", hl))
+@END5.on_message(filters.command("stop", hl))
+@END6.on_message(filters.command("stop", hl))
+@END7.on_message(filters.command("stop", hl))
+@END8.on_message(filters.command("stop", hl))
+@END9.on_message(filters.command("stop", hl))
+@END10.on_message(filters.command("stop", hl))
+async def stop_plug(_, m):
+    await spam_stop(_, m)
+
 @END.on_message(filters.command("raid", hl))
 @END2.on_message(filters.command("raid", hl))
 @END3.on_message(filters.command("raid", hl))
