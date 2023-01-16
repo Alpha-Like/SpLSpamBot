@@ -145,16 +145,16 @@ async def addecho_plug(_, m):
 
 print("\n[module] loaded :- addecho")
 
-@END.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
-@END2.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
-@END3.on_message(filters.command("rmecho", hl)& filters.user(LEGENDS))
-@END4.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
-@END5.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
-@END6.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
-@END7.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
-@END8.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
-@END9.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
-@END10.on_message(filters.command("rmecho", hl) & filters.user(LEGENDS))
+@END.on_message(filters.command("rmecho", hl))
+@END2.on_message(filters.command("rmecho", hl))
+@END3.on_message(filters.command("rmecho", hl))
+@END4.on_message(filters.command("rmecho", hl))
+@END5.on_message(filters.command("rmecho", hl))
+@END6.on_message(filters.command("rmecho", hl))
+@END7.on_message(filters.command("rmecho", hl))
+@END8.on_message(filters.command("rmecho", hl))
+@END9.on_message(filters.command("rmecho", hl))
+@END10.on_message(filters.command("rmecho", hl))
 async def rmecho_plug(_, m):
     await rmecho(_, m)
 
