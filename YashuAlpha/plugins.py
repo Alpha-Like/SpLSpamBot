@@ -4,6 +4,7 @@ import time
 from .data import KeshavX
 
 hl = STUFF.COMMAND_HANDLER
+from .verify import verify
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
@@ -33,7 +34,7 @@ async def start(_, m):
     DEV.SUDO_USERS.append(DEV.OWNER_ID)
     x = DEV.SUDO_USERS
     bot_name = "𝙀𝙣𝙙 𝙓 𝙎𝙥𝙖𝙢"
-    if m.from_user.id in x:
+    if await verify(m.from_user.id):
         txt = f"**Hello Boss !!, It's Me {bot_name}, Your Spam Bot !! \n\n Click Below Buttons For Help. 🌚**"
         await m.reply_photo(STUFF.START_PIC, caption=txt, reply_markup=START_MARKUP_DEV)
         return
@@ -127,6 +128,8 @@ HELP_MARKUP = IKM(
               )
 
 async def help(_, m):
+    if not await verify(m.from_user.id):
+        return
     await m.reply_photo(STUFF.HELP_PIC, caption=HELP_TEXT, reply_markup=HELP_MARKUP)
     return
 
@@ -139,31 +142,31 @@ CLOSE_MARKUP = IKM(
                )
 
 async def cmds_cbq(_, q):
-    if not q.from_user.id in LEGENDS:
+    if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=HELP_TEXT, reply_markup=HELP_MARKUP)
 
 async def spam_cbq(_, q):
-    if not q.from_user.id in LEGENDS:
+    if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=SPAM_HELP, reply_markup=CLOSE_MARKUP)
 
 async def raid_cbq(_, q):
-    if not q.from_user.id in LEGENDS:
+    if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=RAID_HELP, reply_markup=CLOSE_MARKUP)
 
 async def extra_cbq(_, q):
-    if not q.from_user.id in LEGENDS:
+    if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.edit_message_text(text=EXTRA_HELP, reply_markup=CLOSE_MARKUP)
 
 async def close_cbq(_, q):
-    if not q.from_user.id in LEGENDS:
+    if not await verify(q.from_user.id):
         return await q.answer("START ME IN PRIVATE AND GET SOURCE CODE OF THIS BOT ! AND DEPLOY YOUR OWN !", show_alert=True)
     await q.answer()
     await q.message.delete()
