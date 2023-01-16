@@ -4,7 +4,7 @@ import time
 from YashuAlpha.plugins import start, help, cmds_cbq, close_cbq, raid_cbq, extra_cbq, spam_cbq
 from YashuAlpha.raid import raid, replyraid, dreplyraid, raid_cwf
 from YashuAlpha.data import KeshavX
-from YashuAlpha.spam import spam_func, dspam_func
+from YashuAlpha.spam import spam_func, dspam_func, spam_stop
 from YashuAlpha.echo import addecho, rmecho, echo_cwf, echos
 from YashuAlpha.leave import leave
 from YashuAlpha.sudo import add_or_del_sudo, sudo_users
