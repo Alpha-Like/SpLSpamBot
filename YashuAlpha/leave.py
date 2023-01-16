@@ -5,6 +5,8 @@ from .verify import verify
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 async def leave(_, m):
+    if not await verify(m.from_user.id):
+        return
     try:
         id = int(m.text.split()[1])
     except:
