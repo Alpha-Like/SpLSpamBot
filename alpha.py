@@ -160,7 +160,7 @@ async def rmecho_plug(_, m):
 
 print("\n[module] loaded :- rmecho")
 
-@END.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
+@END.on_message(filters.command("echos", hl))
 @END2.on_message(filters.command("echos", hl) & filters.user(LEGENDS))
 @END3.on_message(filters.command("echos", hl)& filters.user(LEGENDS))
 @END4.on_message(filters.command("raid", hl) & filters.user(LEGENDS))
