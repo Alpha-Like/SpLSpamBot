@@ -76,7 +76,7 @@ async def aliver(_, m):
     if not await verify(m.from_user.id):
         return
     x = time.time()
-    ok = await m.reply_photo(PIC, caption"`checking...`")
+    ok = await m.reply_photo(PIC, caption="`checking...`")
     x = str((time.time()-x)*1000)
     y = x.index(".")
     x = f"`{x[0:y+2]}`"
