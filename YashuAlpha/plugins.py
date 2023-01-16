@@ -6,6 +6,12 @@ from .data import KeshavX
 hl = STUFF.COMMAND_HANDLER
 from .verify import verify
 
+SPARE = "https://telegra.ph/file/31f1906a790ec93ace4e2.jpg"
+
+START_PIC = STUFF.START_PIC if STUFF.START_PIC else SPARE
+
+HELP_PIC = STUFF.HELP_PIC if STUFF.HELP_PIC else SPARE
+
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 START_MARKUP_STR = IKM(
@@ -36,13 +42,13 @@ async def start(_, m):
     bot_name = "𝙀𝙣𝙙 𝙓 𝙎𝙥𝙖𝙢"
     if await verify(m.from_user.id):
         txt = f"**Hello Boss !!, It's Me {bot_name}, Your Spam Bot !! \n\n Click Below Buttons For Help. 🌚**"
-        await m.reply_photo(STUFF.START_PIC, caption=txt, reply_markup=START_MARKUP_DEV)
+        await m.reply_photo(START_PIC, caption=txt, reply_markup=START_MARKUP_DEV)
         return
     if str(m.chat.id)[0] == "-":
         return
     men = m.from_user.mention
     txt = f"**Hello !! {men}\nNice To Meet You, Well I Am {bot_name}, A Powerfull Spam Bot.** \n\n**If You Want Your Own Spam Bots You Can Deploy From Button Given Below.** \n\n**Powered By : [𝙎𝙥𝙇](https://t.me/SpLBots)**"
-    await m.reply_photo(STUFF.START_PIC, caption=txt, reply_markup=START_MARKUP_STR)
+    await m.reply_photo(START_PIC, caption=txt, reply_markup=START_MARKUP_STR)
     return
 
 HELP_TEXT = "★ 𝙎𝙥𝙇 𝙓 𝙎𝙥𝙖𝙢 𝙃𝙚𝙡𝙥 𝙈𝙚𝙣𝙪 ★\n𝐂𝐥𝐢𝐜𝐤 𝐎𝐧 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧𝐬 𝐅𝐨𝐫 𝐇𝐞𝐥𝐩"
@@ -130,7 +136,7 @@ HELP_MARKUP = IKM(
 async def help(_, m):
     if not await verify(m.from_user.id):
         return
-    await m.reply_photo(STUFF.HELP_PIC, caption=HELP_TEXT, reply_markup=HELP_MARKUP)
+    await m.reply_photo(HELP_PIC, caption=HELP_TEXT, reply_markup=HELP_MARKUP)
     return
 
 CLOSE_MARKUP = IKM(
