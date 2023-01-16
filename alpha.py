@@ -137,30 +137,14 @@ async def addecho_plug(_, m):
 print("\n[module] loaded :- addecho")
 
 @END.on_message(filters.command("rmecho", hl))
-@END2.on_message(filters.command("rmecho", hl))
-@END3.on_message(filters.command("rmecho", hl))
-@END4.on_message(filters.command("rmecho", hl))
-@END5.on_message(filters.command("rmecho", hl))
-@END6.on_message(filters.command("rmecho", hl))
-@END7.on_message(filters.command("rmecho", hl))
-@END8.on_message(filters.command("rmecho", hl))
-@END9.on_message(filters.command("rmecho", hl))
-@END10.on_message(filters.command("rmecho", hl))
+
 async def rmecho_plug(_, m):
     await rmecho(_, m)
 
 print("\n[module] loaded :- rmecho")
 
 @END.on_message(filters.command("echos", hl))
-@END2.on_message(filters.command("echos", hl))
-@END3.on_message(filters.command("echos", hl))
-@END4.on_message(filters.command("raid", hl))
-@END5.on_message(filters.command("echos", hl))
-@END6.on_message(filters.command("echos", hl))
-@END7.on_message(filters.command("echos", hl))
-@END8.on_message(filters.command("echos", hl))
-@END9.on_message(filters.command("echos", hl))
-@END10.on_message(filters.command("echos", hl))
+
 async def echos_plug(_, m):
     await echos(_, m)
 
