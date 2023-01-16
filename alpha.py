@@ -162,14 +162,12 @@ async def raid_plug(_, m):
 print("\n[module] loaded :- raid")
 
 @END.on_message(filters.command("replyraid", hl))
-
 async def replyraid_plug(_, m):
     await replyraid(_, m)
 
 print("\n[module] loaded :- replyraid")
 
 @END.on_message(filters.command("dreplyraid", hl))
-
 async def dreplyraid_plug(_, m):
     await dreplyraid(_, m)
 
