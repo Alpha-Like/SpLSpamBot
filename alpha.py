@@ -162,30 +162,14 @@ async def raid_plug(_, m):
 print("\n[module] loaded :- raid")
 
 @END.on_message(filters.command("replyraid", hl))
-@END2.on_message(filters.command("replyraid", hl))
-@END3.on_message(filters.command("replyraid", hl))
-@END4.on_message(filters.command("replyraid", hl))
-@END5.on_message(filters.command("replyraid", hl))
-@END6.on_message(filters.command("replyraid", hl))
-@END7.on_message(filters.command("replyraid", hl))
-@END8.on_message(filters.command("replyraid", hl))
-@END9.on_message(filters.command("replyraid", hl))
-@END10.on_message(filters.command("replyraid", hl))
+
 async def replyraid_plug(_, m):
     await replyraid(_, m)
 
 print("\n[module] loaded :- replyraid")
 
 @END.on_message(filters.command("dreplyraid", hl))
-@END2.on_message(filters.command("dreplyraid", hl))
-@END3.on_message(filters.command("dreplyraid", hl))
-@END4.on_message(filters.command("dreplyraid", hl))
-@END5.on_message(filters.command("dreplyraid", hl))
-@END6.on_message(filters.command("dreplyraid", hl))
-@END7.on_message(filters.command("dreplyraid", hl))
-@END8.on_message(filters.command("dreplyraid", hl))
-@END9.on_message(filters.command("dreplyraid", hl))
-@END10.on_message(filters.command("dreplyraid", hl))
+
 async def dreplyraid_plug(_, m):
     await dreplyraid(_, m)
 
