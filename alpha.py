@@ -8,7 +8,7 @@ from YashuAlpha.spam import spam_func, dspam_func
 from YashuAlpha.echo import addecho, rmecho, echo_cwf, echos
 from YashuAlpha.leave import leave
 from YashuAlpha.sudo import add_or_del_sudo, sudo_users
-from YashuAlpha.alive_ping import ping
+from YashuAlpha.alive_ping import ping, aliver 
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -56,6 +56,21 @@ async def ping_plug(_, m):
     await ping(_, m)
 
 print("\n[module] loaded :- ping")
+
+@END.on_message(filters.command("alive", hl))
+@END2.on_message(filters.command("alive", hl))
+@END3.on_message(filters.command("alive", hl))
+@END4.on_message(filters.command("alive", hl))
+@END5.on_message(filters.command("alive", hl))
+@END6.on_message(filters.command("alive", hl))
+@END7.on_message(filters.command("alive", hl))
+@END8.on_message(filters.command("alive", hl))
+@END9.on_message(filters.command("alive", hl))
+@END10.on_message(filters.command("alive", hl))
+async def alive_plug(_, m):
+    await aliver(_, m)
+
+print("[module] loaded :- alive")
 
 @END.on_message(filters.command("spam", hl))
 @END2.on_message(filters.command("spam", hl))
