@@ -58,7 +58,7 @@ def grt(seconds: int) -> str:
     return ping_time
 
 async def ping(_, m):
-    if not await verify(m.from_user.id)
+    if not await verify(m.from_user.id):
         return
     st = time.time()
     ok = await eor(m, "`Checking...`")
