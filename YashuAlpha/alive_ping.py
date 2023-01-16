@@ -1,7 +1,7 @@
 import time
 from . import startTime
 from config import STUFF, DEV
-from . import startTime
+from .verify import verify
 
 OWNER = DEV.OWNER_ID
 
@@ -40,6 +40,8 @@ def grt(seconds: int) -> str:
     return ping_time
 
 async def ping(_, m):
+    if not await verify(m.from_user.id)
+        return
     st = time.time()
     ok = await eor(m, "`Checking...`")
     end = time.time()
