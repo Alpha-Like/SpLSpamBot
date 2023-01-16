@@ -1,6 +1,7 @@
 from .data import KeshavX, GROUP
 from config import STUFF
 import asyncio
+from .verify import verify
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -40,6 +41,8 @@ async def get_reply_and_args(m):
     return type, args
 
 async def spam_func(_, m):
+    if not await verify(m.from_user.id):
+        return
     global SPAM, STOP
     STOP = False
     SPAM = True
@@ -130,6 +133,8 @@ async def spam_func(_, m):
     SPAM = False
 
 async def dspam_func(_, m):
+    if not await verify(m.from_user.id):
+        return
     global SPAM, STOP
     STOP = False
     SPAM = True
