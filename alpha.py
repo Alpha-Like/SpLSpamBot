@@ -103,15 +103,6 @@ async def dspam_plug(_, m):
 print("\n[module] loaded :- dspam")
 
 @END.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
-@END2.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
-@END3.on_message(filters.command(["addsudo", "rmsudo"], hl)& filters.user(LEGEND))
-@END4.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
-@END5.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
-@END6.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
-@END7.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
-@END8.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
-@END9.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
-@END10.on_message(filters.command(["addsudo", "rmsudo"], hl) & filters.user(LEGEND))
 async def sudo_plug(_, m):
     await add_or_del_sudo(_, m)
 
