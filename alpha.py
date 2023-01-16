@@ -122,15 +122,7 @@ async def gsudo_plug(_, m):
 print("\n[module] loaded :- sudos")
 
 @END.on_message(filters.command("addecho", hl))
-@END2.on_message(filters.command("addecho", hl))
-@END3.on_message(filters.command("addecho", hl))
-@END4.on_message(filters.command("addecho", hl))
-@END5.on_message(filters.command("addecho", hl))
-@END6.on_message(filters.command("addecho", hl))
-@END7.on_message(filters.command("addecho", hl))
-@END8.on_message(filters.command("addecho", hl))
-@END9.on_message(filters.command("addecho", hl))
-@END10.on_message(filters.command("addecho", hl))
+
 async def addecho_plug(_, m):
     await addecho(_, m)
 
