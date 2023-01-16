@@ -7,6 +7,22 @@ OWNER = DEV.OWNER_ID
 
 hl = STUFF.COMMAND_HANDLER
 
+form = """`
+
+SpL Spam Bot 
+
+┏━━━━━━✦❘༻༺❘✦━━━━━━┓
+┃☁️ 𝐀𝐋𝐏𝐇𝐀 𝐁𝐎𝐓 : V1
+┃☁️ 𝐔𝐏𝐓𝐈𝐌𝐄 : {}
+┃☁️ 𝐎𝐖𝐍𝐄𝐑 : {}
+┗━━━━━━✦❘༻༺❘✦━━━━━━┛
+┏━━━━━━✦❘༻༺❘✦━━━━━━┓
+┃ ⁭⁫       📡 𝐏𝐈𝐍𝐆 : {} ms
+┗━━━━━━✦❘༻༺❘✦━━━━━━┛
+        ↠━━━━━☬◆☬━━━━━↞
+
+`"""
+
 TEXT = """
 
 💞Pong💞
@@ -53,3 +69,16 @@ async def ping(_, m):
     xD += f"✥ 𝙋𝙞𝙣𝙜 :- {str((end-st)*1000)[0:5]}ms\n"
     xD += f"✥ 𝙐𝙗 𝘿𝙚𝙫 :- [𝚂𝙿𝙻](t.me/SpLBots)\n"
     return await ok.edit(TEXT.format(pong, men))
+
+async def aliver(_, m):
+    if not await verify(m.from_user.id):
+        return
+    x = time.time()
+    ok = await m.reply("`checking...`")
+    x = str((time.time()-x)*1000)
+    y = x.index(".")
+    x = f"`{x[0:y+2]}`"
+    upt = grt(int(time.time()-startTime))
+    men = (await _.get_users(OWNER)).mention
+    await ok.edit(form.format(upt, men, x))
+    
