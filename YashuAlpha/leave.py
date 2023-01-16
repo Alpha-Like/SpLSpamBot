@@ -1,5 +1,6 @@
 from config import DEV
 from .data import KeshavX
+from .verify import verify
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
