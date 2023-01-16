@@ -61,7 +61,7 @@ async def ping(_, m):
     if not await verify(m.from_user.id):
         return
     st = time.time()
-    ok = await eor(m, "`Checking...`")
+    ok = await m.reply("`Checking...`")
     end = time.time()
     men = (await _.get_users(OWNER)).mention
     pong = str((end-st)*1000)[0:5]
