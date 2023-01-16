@@ -1,12 +1,16 @@
 from config import DEV, STUFF
 from .data import KeshavX
 from YashuAlpha.Database.echo import *
+from .verify import verify
 
 hl = STUFF.COMMAND_HANDLER
 
 LEGENDS = DEV.SUDO_USERS + [DEV.OWNER_ID] + KeshavX
 
 async def addecho(_, m):
+    x = await verify(m.from_user.id)
+    if not x:
+        return
     try:
         if m.reply_to_message:
             id = m.reply_to_message.from_user.id
@@ -18,14 +22,16 @@ async def addecho(_, m):
                 id = int(x)
     except:
         return await m.reply(f"`{hl}addecho [username|id|reply]`")
-    if id in LEGENDS:
+    if await verify(id):
         return await m.reply("`CAN'T ECHO THEM !`")
     if await is_echo(id):
         return await m.reply("`ECHO IS ALREADY ACTIVATED TO THIS USER !`")
     await add_echo(id)
-    await m.reply(f"`ECHO ACTIVATED TO THE USER `<code>{id}</code>")
+    await m.reply(f"`ECHO ACTIVATED TO THE USER` <code>{id}</code>")
 
 async def rmecho(_, m):
+    if not await verify(m.from_user.id):
+        return
     try:
         if m.reply_to_message:
             id = m.reply_to_message.from_user.id
@@ -36,12 +42,11 @@ async def rmecho(_, m):
             else:
                 id = int(x)
     except:
-        return await m.reply(f"`{hl}addecho [username|id|reply]`")
-    
+        return await m.reply(f"`{hl}rmecho [username|id|reply]`")
     if not await is_echo(id):
         return await m.reply("`USER NOT IN ECHO LIST !`")
     await del_echo(id)
-    await m.reply(f"`ECHO DEACTIVATED TO THE USER `<code>{id}</code>")
+    await m.reply(f"`ECHO DEACTIVATED TO THE USER` <code>{id}</code>")
 
 async def echo_cwf(_, m):
     if m.from_user:
@@ -80,6 +85,8 @@ async def echo_cwf(_, m):
                 pass
 
 async def echos(_, m):
+    if not await verify(m.from_user.id):
+        return
     x = await get_echos()
     if not x:
         await m.reply("`No user is added to echo !`")
