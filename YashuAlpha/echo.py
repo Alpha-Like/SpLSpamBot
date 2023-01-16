@@ -89,7 +89,7 @@ async def echos(_, m):
         return
     x = await get_echos()
     if not x:
-        await m.reply("`No user is added to echo !`")
+        return await m.reply("`No user is added to echo !`")
     txt = "**Echo Users :**\n\n"
     for y in x:
         txt += f"`{y}`\n"
