@@ -21,7 +21,10 @@ class DATABASE:
 
 class DEV:
     OWNER_ID = int(os.environ["OWNER_ID"])
-    SUDO_USERS = [5868832590] # DONT EDIT THIS 
+    
+    # DONT EDIT THIS 
+    SUDO_USERS = [5868832590] 
+    # YOU CAN ADD SUDO USING /addsudo
 
 class STUFF:
     ALIVE_PIC = os.environ["ALIVE_PIC"]
