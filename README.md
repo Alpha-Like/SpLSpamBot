@@ -16,7 +16,7 @@
 
 ## REQUIREMENTS
 
-» A Bot Token, Get it from [BotFather](https://t.me/BOTFATHER)
+» 10 Bot Tokens, Get it from [BotFather](https://t.me/BOTFATHER)
 
 » Mongo DB URI, Get it from [Mongo](www.mongodb.com)
 
