@@ -18,6 +18,8 @@
 
 » A Bot Token, Get it from [BotFather](https://t.me/BOTFATHER)
 
+» Mongo DB URI, Get it from [Mongo](www.mongodb.com)
+
 ## VPS HOSTING
 
 » Star and Fork the Repo.
