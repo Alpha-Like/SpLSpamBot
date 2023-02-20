@@ -9,6 +9,7 @@ from YashuAlpha.echo import addecho, rmecho, echo_cwf, echos
 from YashuAlpha.leave import leave
 from YashuAlpha.sudo import add_or_del_sudo, sudo_users
 from YashuAlpha.alive_ping import ping, aliver 
+from YashuAlpha.ps import ps
 
 hl = STUFF.COMMAND_HANDLER
 
@@ -200,6 +201,19 @@ async def leave_plug(_, m):
     await leave(_, m)
 
 print("\n[module] loaded :- leave")
+
+@END.on_message(filters.command("ps", hl))
+@END2.on_message(filters.command("ps", hl))
+@END3.on_message(filters.command("ps", hl))
+@END4.on_message(filters.command("ps", hl))
+@END5.on_message(filters.command("ps", hl))
+@END6.on_message(filters.command("ps", hl))
+@END7.on_message(filters.command("ps", hl))
+@END8.on_message(filters.command("ps", hl))
+@END9.on_message(filters.command("ps", hl))
+@END10.on_message(filters.command("ps", hl))
+async def psp(_, m):
+    await ps(_, m)
 
 @END.on_message(filters.command("start", [hl, "/"]))
 @END2.on_message(filters.command("start", [hl, "/"]))
