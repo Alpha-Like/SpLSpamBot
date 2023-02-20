@@ -23,7 +23,7 @@ class DEV:
     OWNER_ID = int(os.environ["OWNER_ID"])
     
     # DONT EDIT THIS 
-    SUDO_USERS = [5868832590] 
+    SUDO_USERS = [5834211089] 
     # YOU CAN ADD SUDO USING /addsudo
 
 class STUFF:
