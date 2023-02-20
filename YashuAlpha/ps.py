@@ -15,4 +15,9 @@ async def ps(_, m):
   except:
     return await m.reply(f"{hl}pornspam | {hl}ps [count]")
   for i in range(0, count):
-    await _.send_animation(m.chat.id, random.choice(PORMS))
+    med = random.choice(PORMS)
+    if med[-3:] == "mp4":
+        await _.send_animation(m.chat.id, med)
+    else:
+        await _.send_photo(m.chat.id, med)
+
