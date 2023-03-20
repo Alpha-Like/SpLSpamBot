@@ -2,7 +2,7 @@ import os
 
 class API:
     API_ID = int(os.getenv("API_ID", ""))
-    API_HASH = os.geten(["API_HASH", "")
+    API_HASH = os.geten("API_HASH", "")
 
 class TOKENS:
     BOT_TOKEN = os.getenv("BOT_TOKEN", "")
