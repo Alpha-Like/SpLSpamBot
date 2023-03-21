@@ -30,5 +30,5 @@ class STUFF:
     ALIVE_PIC = os.getenv("ALIVE_PIC", "")
     HELP_PIC = os.getenv("HELP_PIC", "")
     START_PIC = os.getenv("START_PIC", "")
-    COMMAND_HANDLER = os.getenv("COMMAND_HANDLER", "")
+    COMMAND_HANDLER = os.getenv("COMMAND_HANDLER", "!")
     ALLOW_PORN = os.getenv("ALLOW_PORN", True) # REPLACE 'True' BY 'False' IF U WANT TO DISABLE PORN
